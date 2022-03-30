@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 from setuptools import setup
 
-SEG_PLUGIN_ENTRY_POINT = 'neon-segmentation-plugin-nltk=neon_tokenization_plugin_nltk:NltkSegmenter'
-TOK_PLUGIN_ENTRY_POINT = 'neon-tokenization-plugin-nltk=neon_tokenization_plugin_nltk:NltkTokenizer'
+PLUGIN_ENTRY_POINT = 'neon-tokenization-plugin-nltk=neon_tokenization_plugin_nltk:NltkTokenizer'
 
 setup(
     name='neon-tokenization-plugin-nltk',
@@ -25,7 +24,6 @@ setup(
         'Programming Language :: Python :: 3.6',
     ],
     entry_points={
-        'intentbox.segmentation': SEG_PLUGIN_ENTRY_POINT,
-        'intentbox.tokenization': TOK_PLUGIN_ENTRY_POINT
+        'intentbox.tokenization': PLUGIN_ENTRY_POINT
     }
 )
